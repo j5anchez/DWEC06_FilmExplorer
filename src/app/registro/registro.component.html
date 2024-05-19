@@ -1,0 +1,16 @@
+<div>
+  <h2>Registro</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div *ngIf="errorRegistro&&!registroExitoso" class="alert alert-danger">{{ errorRegistro }}</div>
+    <div class="form-group">
+      <label for="username">Nombre de usuario</label>
+      <input type="text" class="form-control" id="username" name="username" [(ngModel)]="usuario.username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Contraseña</label>
+      <input type="password" class="form-control" id="password" name="password" [(ngModel)]="usuario.password" required>
+    </div>
+    <button *ngIf="!registroExitoso" type="submit" class="btn btn-primary">Registrarse</button>
+    <span *ngIf="registroExitoso">Registrado correctamente, serás redirigido a la pantalla de login en 5 segundos</span>
+  </form>
+</div>

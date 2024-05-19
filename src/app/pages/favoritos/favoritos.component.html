@@ -1,0 +1,21 @@
+<div class="container mt-4">
+    <h2>Favoritos</h2>
+    <hr />
+    <div class="row">
+        <div class="col-12" *ngIf="favoriteMovies.length === 0">
+            <p>No hay películas en la lista de favoritos.</p>
+        </div>
+        <div class="col-md-3" *ngFor="let movie of favoriteMovies">
+            <div class="card mb-3 shadow-sm">
+                <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" class="card-img-top"
+                    alt="{{movie.title}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{movie.title}}</h5>
+                    <p class="card-text">{{movie.comentario}}</p>
+                    <button class="btn btn-outline-light" (click)="editComment(movie)">Editar</button>
+                    <button class="btn btn-danger" (click)="deleteFromFavorites(movie.id)">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

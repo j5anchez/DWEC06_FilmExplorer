@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg border-bottom border-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/home">
+      <img src="assets/logo.png" height="64" alt="Películas" title="Películas">
+    </a>
+    <button class="navbar-toggler navbar-light bg-light" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      </ul>
+      <form class="d-flex align-items-center">
+        <input #txtBuscar (keyup.enter)="buscarPelicula(txtBuscar.value)" class="form-control me-2" type="search"
+          placeholder="Buscar película ..." aria-label="Search">
+        <button (click)="buscarPelicula(txtBuscar.value)" class="btn btn-outline-light" type="submit">Buscar</button>
+      </form>
+      <div class="ml-auto">
+        <div *ngIf="isLoggedIn" class="ms-3">
+          <span class="navbar-text text-white">Hola, {{ username }}</span>
+          <button (click)="logout()" class="btn btn-outline-light ms-2" type="button">Cerrar sesión</button>
+        </div>
+        <div *ngIf="!isLoggedIn">
+          <button class="btn btn-outline-light mr-2" type="button" routerLink="/login">Login</button>
+          <button class="btn btn-outline-light" type="button" routerLink="/registro">Registro</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- <nav class="navbar navbar-expand-lg border-bottom border-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/home">
+      <img src="assets/logo.png" height="64" alt="Películas" title="Películas">
+    </a>
+    <button class="navbar-toggler navbar-light bg-light" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      </ul>
+      <form class="d-flex">
+        <input #txtBuscar (input)="termino = txtBuscar.value" class="form-control me-2" type="search"
+          placeholder="Buscar" aria-label="Search">
+        <button class="btn btn-outline-success" (click)="buscar()">Buscar</button>
+      </form>
+      <div *ngIf="usuarioLogueado; else notLogged">
+        <span class="navbar-text me-3">Hola, {{ usuarioLogueado }}</span>
+        <button class="btn btn-outline-danger" (click)="logout()">Cerrar sesión</button>
+      </div>
+      <ng-template #notLogged>
+        <button class="btn btn-outline-primary me-2" routerLink="/login">Login</button>
+        <button class="btn btn-outline-success" routerLink="/registro">Registrarse</button>
+      </ng-template>
+    </div>
+  </div>
+</nav> -->

@@ -1,0 +1,59 @@
+{
+  "usuarios": [
+    {
+      "username": "aaa",
+      "password": "aaa",
+      "id": 2,
+      "favoritos": [
+        {
+          "id": 653346,
+          "comentario": "¡Una película increíble!"
+        }
+      ]
+    },
+    {
+      "username": "usuario",
+      "password": "usuario",
+      "id": 3,
+      "favoritos": []
+    },
+    {
+      "username": "abc",
+      "password": "abc",
+      "id": 4,
+      "favoritos": []
+    },
+    {
+      "username": "qwerty",
+      "password": "qwerty",
+      "id": 5,
+      "favoritos": []
+    },
+    {
+      "username": "zzz",
+      "password": "zzz",
+      "id": 6,
+      "favoritos": []
+    }
+  ],
+  "peliculas": [
+    {
+      "id": 653346,
+      "title": "El reino del planeta de los simios",
+      "poster_path": "/r8L3fUvftNeqPMCITdXJfiXbFBU.jpg",
+      "comentario": "qqqqq"
+    },
+    {
+      "id": 748783,
+      "title": "Garfield: La película",
+      "comentario": "comentario",
+      "poster_path": "/jUSzf612WVRrCRJmMAxXjb7yi9r.jpg"
+    },
+    {
+      "id": 843527,
+      "title": "La idea de tenerte",
+      "comentario": "",
+      "poster_path": "/heci4aAOBfN5I2BQ1QpVFE2o5qi.jpg"
+    }
+  ]
+}
